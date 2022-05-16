@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #1C1C1D;
+  font-family: 'Space Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slider {
+  height: 70vh;
+  width: 70%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #ffffff;
+  background-image: none;
+  border-radius: 1rem;
+  transition-delay: 0.5s;
+}
+/* 
+input {
+  display: none;
+} */
+
+.text {
+  padding: 1rem 0;
+  width: 80%;
+}
+
+.text>span {
+  display: block;
+  height: 0;
+  opacity: 0;
+  transition: all 1s;
+}
+
+@keyframes scale1 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale3 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale4 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#slide1:checked~.slider {
+  background-image: url("assets/mem1.png");
+  animation: scale1 1s linear;
+}
+
+#slide2:checked~.slider {
+  background-image: url("assets/mem2.png");
+  animation: scale2 1s linear;
+}
+
+#slide3:checked~.slider {
+  background-image: url("assets/mem3.png");
+  animation: scale3 1s linear;
+}
+
+#slide4:checked~.slider {
+  background-image: url("assets/mem4.png");
+  animation: scale4 1s linear;
+}
+
+#slide1:checked~.bottom>.controls>label[for='slide1']>div {
+  background-color: #1C1C1D;
+}
+
+#slide2:checked~.bottom>.controls>label[for='slide2']>div {
+  background-color: #1C1C1D;
+}
+
+#slide3:checked~.bottom>.controls>label[for='slide3']>div {
+  background-color: #1C1C1D;
+}
+
+#slide4:checked~.bottom>.controls>label[for='slide4']>div {
+  background-color: #1C1C1D;
+}
+
+#slide1:checked~.bottom>.text>span:nth-child(1) {
+  animation: opacity 1s linear;
+  opacity: 1;
+}
+
+#slide2:checked~.bottom>.text>span:nth-child(2) {
+  animation: opacity 1s linear;
+  opacity: 1;
+}
+
+#slide3:checked~.bottom>.text>span:nth-child(3) {
+  animation: opacity 1s linear;
+  opacity: 1;
+}
+
+#slide4:checked~.bottom>.text>span:nth-child(4) {
+  animation: opacity 1s linear;
+  opacity: 1;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.controls {
+  padding: 1rem 0;
+  display: flex;
+}
+
+label {
+  border: 0.6rem solid transparent;
+}
+
+.dot {
+  padding: 0 0.35rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.15rem solid rgb(200, 206, 204);
+  background-color: rgb(94, 97, 94);
+  transition: all 0.5s;
+}
+
+.dot:hover {
+  border-color: white;
+  background-color: white;
+}
+
+label:hover>.dot {
+  border-color: white;
+  background-color: white;
+}
