@@ -221,10 +221,12 @@ label:hover>.dot {
 
   .slider {
     height: 50vh;
+    width: 80%;
     font-size: 0.8rem;
   }
 
   .bottom {
+    width: 80%;
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -232,5 +234,20 @@ label:hover>.dot {
   .text {
     width: 100%;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .slider {
+    height: 40vh;
+    width: 90%;
+    font-size: 0.8rem;
+  }
+
+  .bottom {
+    width: 90%;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }
