@@ -196,6 +196,7 @@ input {
 
 label {
   border: 0.6rem solid transparent;
+  cursor: pointer;
 }
 
 .dot {
@@ -205,6 +206,7 @@ label {
   border: 0.15rem solid rgb(200, 206, 204);
   background-color: rgb(94, 97, 94);
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 .dot:hover {
